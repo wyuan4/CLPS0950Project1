@@ -1,4 +1,7 @@
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
-%
+%pull two middle cards from the main deck
+[pulled_card1,pulled_card2,new_deck] = middle_card(main_deck);
+
+%split the deck into two (for the two players);
