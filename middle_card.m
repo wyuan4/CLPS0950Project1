@@ -5,8 +5,8 @@ deck_size = length(main_deck);
 pos = randperm(deck_size,2);
 
 
-pulled_card1 = main_deck(pos(1))
-pulled_card2 = main_deck(pos(2))
+pulled_card1 = main_deck(pos(1));
+pulled_card2 = main_deck(pos(2));
 main_deck(min(pos)) = [];
 main_deck(max(pos)-1) = [];
 new_deck = main_deck;
