@@ -17,7 +17,7 @@ p2_deck = p2_deck(randperm(length(p2_deck)));
 [p1_hand, p1_deck] = draw_hand(p1_deck);
 [p2_hand, p2_deck] = draw_hand(p2_deck);
 
-
+playable = true;
 
 while playable%loops until one player does not have playable cards
    
@@ -33,7 +33,25 @@ while playable%loops until one player does not have playable cards
         middle_card1 = randi(13);
         middle_card2 = randi(13);
     end
+    
+    if isempty(p1_hand) || isempty(p2_hand) %if a player's hand is empty, then end loop
+        playable = false;
+    end
+    
 end
+
+if isempty(p1_hand)
+    disp 'Player 1 is the supreme champion!!!!'
+else
+    disp 'Player 2 Wins'
+end
+
+
+
+
+
+
+
 
 
 

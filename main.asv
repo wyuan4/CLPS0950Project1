@@ -17,7 +17,7 @@ p2_deck = p2_deck(randperm(length(p2_deck)));
 [p1_hand, p1_deck] = draw_hand(p1_deck);
 [p2_hand, p2_deck] = draw_hand(p2_deck);
 
-
+playable = true;
 
 while playable%loops until one player does not have playable cards
    
@@ -27,13 +27,21 @@ while playable%loops until one player does not have playable cards
 
     %Player 2 takes their turn,, and draws card
     [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
-    [p2_hand, p2_deck. drawable2] = fillhand(p2_hand,p2_deck)
+    [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
 
     if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
         middle_card1 = randi(13);
         middle_card2 = randi(13);
     end
+    
+    if length(p1_hand) == 0 | length(p2_hand) == 0
+        playable = false;
+    end
 end
+
+
+
+
 
 
 
