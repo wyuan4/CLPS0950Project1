@@ -37,6 +37,8 @@ while playable%loops until one player does not have playable cards
     [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
     [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
+%%add joker functionality here 
+    
     if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
         middle_card1 = randi(13);
         middle_card2 = randi(13);
