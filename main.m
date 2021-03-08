@@ -58,6 +58,12 @@ disp('Player One Wins ='); disp(P1_Win);
 disp('Player Two Wins ='); disp(P2_Win);
 end
 
+y = [P1_Win P2_Win];
+bar(y);
+xlabel('Player N');
+ylabel('Total Wins');
+
+
 
 
 
