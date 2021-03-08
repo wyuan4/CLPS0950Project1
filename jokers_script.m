@@ -1,10 +1,15 @@
 %initiate the main vector for deck, ask if player wants jokers in
-%deck or not (add an if statement
+%deck or not and then add jokers if user said 'Yes'
+str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
+
 main_deck = repmat(1:13,1,4);
-if
+
+if strcmp(str,'Yes') 
     main_deck = addJokers(main_deck);
 end
 
+%shuffle main deck
+main_deck = main_deck(randperm(length(main_deck)));
 
 %pull two middle cards from the main deck
 
@@ -12,12 +17,12 @@ end
 
 %split the deck into two from the middle (for the two players); 
 %potentially think about randomizing the hands later on in the process
-p1_deck = new_deck(1:length(new_deck)/2);
-p2_deck = new_deck((length(new_deck)/2)+1:end);
+p1_deck = new_deck(1:length(new_deck)/2)
+p2_deck = new_deck((length(new_deck)/2)+1:end)
 
 %shuffles each players' decks
-p1_deck = p1_deck(randperm(length(p1_deck)));
-p2_deck = p2_deck(randperm(length(p2_deck)));
+%p1_deck = p1_deck(randperm(length(p1_deck)));
+%p2_deck = p2_deck(randperm(length(p2_deck)));
 
 %Each player draws five cards from their decks
 [p1_hand, p1_deck] = draw_hand(p1_deck);
