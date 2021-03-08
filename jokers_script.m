@@ -1,25 +1,28 @@
-%variables which record the number of wins per player
-P1_Win = 0;
-P2_Win = 0;
+%initiate the main vector for deck, ask if player wants jokers in
+%deck or not and then add jokers if user said 'Yes'
+str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
 
-%this for loop is to keep track of statistics so we can check probability
-%that player 1 and player 2 win (see if whoever starts wins more often)
-for X = 1:5000;
-    
-%initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
+if strcmp(str,'Yes') 
+    main_deck = addJokers(main_deck);
+end
+
+%shuffle main deck
+main_deck = main_deck(randperm(length(main_deck)));
+
 %pull two middle cards from the main deck
+
 [middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 %split the deck into two from the middle (for the two players); 
 %potentially think about randomizing the hands later on in the process
-p1_deck = new_deck(1:length(new_deck)/2);
-p2_deck = new_deck((length(new_deck)/2)+1:end);
+p1_deck = new_deck(1:length(new_deck)/2)
+p2_deck = new_deck((length(new_deck)/2)+1:end)
 
 %shuffles each players' decks
-p1_deck = p1_deck(randperm(length(p1_deck)));
-p2_deck = p2_deck(randperm(length(p2_deck)));
+%p1_deck = p1_deck(randperm(length(p1_deck)));
+%p2_deck = p2_deck(randperm(length(p2_deck)));
 
 %Each player draws five cards from their decks
 [p1_hand, p1_deck] = draw_hand(p1_deck);
@@ -50,29 +53,7 @@ end
 
 %display player 1 as winner if player 1 has an empty hand. Same for player2
 if isempty(p1_hand)
-    P1_Win = P1_Win + 1;
     disp 'Player 1 is the supreme champion!!!!';
 else
-    P2_Win = P2_Win + 1;
     disp 'Player 2 is the supreme champion!!!!';
 end
-
-disp('Player One Wins ='); disp(P1_Win);
-disp('Player Two Wins ='); disp(P2_Win);
-end
-
-y = [P1_Win P2_Win];
-bar(y);
-xlabel('Player N');
-ylabel('Total Wins');
-
-
-
-
-
-
-
-
-
-
-
