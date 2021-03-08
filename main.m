@@ -46,13 +46,3 @@ else
     disp 'Player 2 Wins'
 end
 
-
-
-
-
-
-
-
-
-
-
