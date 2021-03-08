@@ -1,4 +1,4 @@
-function [oarg,varargout]=speedcardplot(varargin)
+function [oarg,varargout]=p_cardplot(varargin)
 %CARDPLOT  Plot playing cards for card games.
 %   It's advicable to use the card class instead.
 %   This function is used by the card class to plot card(s) in

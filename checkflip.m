@@ -11,10 +11,10 @@ if len == 0 %Returns empty hand and new middle cards.
 else
     for i=len:-1:1%Goes through hand and replaces middle card if possible while removing card from hand
         if hand(i) == mc1+1 | hand(i) == mc1-1 
-            mc1 = hand(i)
+            mc1 = hand(i);
             hand(i) = [];
         elseif  hand(i) == mc2+1| hand(i) == mc2-1
-            mc2 = hand(i)
+            mc2 = hand(i);
             hand(i) = [];
         end
     end
