@@ -1,3 +1,6 @@
+%trying to put in visuals of the cards being played by using subplots and
+%downloaded images 
+
 subplot(3,4,1);
 img = imread('\Users\yuanm\Documents\School Documents\CLPS 0950\A_clubs.png');
 imagesc(img)
