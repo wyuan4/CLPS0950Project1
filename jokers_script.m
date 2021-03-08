@@ -1,15 +1,13 @@
-%variables which record the number of wins per player
-P1_Win = 0;
-P2_Win = 0;
-
-%this for loop is to keep track of statistics so we can check probability
-%that player 1 and player 2 win (see if whoever starts wins more often)
-for X = 1:5000;
-    
-%initiate the main vector for deck
+%initiate the main vector for deck, ask if player wants jokers in
+%deck or not (add an if statement
 main_deck = repmat(1:13,1,4);
+if
+    main_deck = addJokers(main_deck);
+end
+
 
 %pull two middle cards from the main deck
+
 [middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 %split the deck into two from the middle (for the two players); 
@@ -50,29 +48,7 @@ end
 
 %display player 1 as winner if player 1 has an empty hand. Same for player2
 if isempty(p1_hand)
-    P1_Win = P1_Win + 1;
     disp 'Player 1 is the supreme champion!!!!';
 else
-    P2_Win = P2_Win + 1;
     disp 'Player 2 is the supreme champion!!!!';
 end
-
-disp('Player One Wins ='); disp(P1_Win);
-disp('Player Two Wins ='); disp(P2_Win);
-end
-
-y = [P1_Win P2_Win];
-bar(y);
-xlabel('Player N');
-ylabel('Total Wins');
-
-
-
-
-
-
-
-
-
-
-
