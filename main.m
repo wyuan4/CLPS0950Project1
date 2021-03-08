@@ -3,16 +3,16 @@ P1_Win = 0;
 P2_Win = 0;
 
 
-for X = 1:200;
+for X = 1:50000;
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
 %pull two middle cards from the main deck
-[middle_card1, middle_card2, new_deck] = middle_card(main_deck)
+[middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 %split the deck into two from the middle (for the two players); 
 %potentially think about randomizing the hands later on in the process
-p1_deck = new_deck(1:length(new_deck)/2)
+p1_deck = new_deck(1:length(new_deck)/2);
 p2_deck = new_deck((length(new_deck)/2)+1:end);
 
 %shuffles each players' decks
@@ -28,12 +28,12 @@ playable = true;
 while playable%loops until one player does not have playable cards
    
     %Player 1 takes their turn, and draws card
-    [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
-    [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
+    [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
+    [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
 
     %Player 2 takes their turn,, and draws card
-    [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
-    [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
+    [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
+    [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
     if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
         middle_card1 = randi(13);
@@ -48,10 +48,10 @@ end
 
 if isempty(p1_hand)
     P1_Win = P1_Win + 1;
-    disp 'Player 1 is the supreme champion!!!!'
+    disp 'Player 1 is the supreme champion!!!!';
 else
     P2_Win = P2_Win + 1;
-    disp 'Player 2 is the supreme champion!!!!'
+    disp 'Player 2 is the supreme champion!!!!';
 end
 
 disp('Player One Wins ='); disp(P1_Win);
