@@ -1,3 +1,9 @@
+%variables which record the number of wins per player
+P1_Win = 0;
+P2_Win = 0;
+
+
+for X = 1:200;
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
@@ -41,8 +47,23 @@ while playable%loops until one player does not have playable cards
 end
 
 if isempty(p1_hand)
+    P1_Win = P1_Win + 1;
     disp 'Player 1 is the supreme champion!!!!'
 else
+    P2_Win = P2_Win + 1;
     disp 'Player 2 is the supreme champion!!!!'
 end
+
+disp('Player One Wins ='); disp(P1_Win);
+disp('Player Two Wins ='); disp(P2_Win);
+end
+
+
+
+
+
+
+
+
+
 
