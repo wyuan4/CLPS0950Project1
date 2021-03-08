@@ -3,7 +3,7 @@ P1_Win = 0;
 P2_Win = 0;
 
 
-for X = 1:50000;
+for X = 1:5000;
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
