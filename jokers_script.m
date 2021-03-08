@@ -8,7 +8,7 @@ if strcmp(str,'Yes')
     main_deck = addJokers(main_deck);
 end
 
-%next, implement the checkflip function to add a step that checks if
+%next, implement the checkflip function to add a step (if statement) that checks if
 %players have jokers, putting down the joker, and then randomly assigning
 %one of the players to put down the next random card (any card). continuing
 %the game after that.
