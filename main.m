@@ -43,7 +43,7 @@ end
 if isempty(p1_hand)
     disp 'Player 1 is the supreme champion!!!!'
 else
-    disp 'Player 2 Wins'
+    disp 'Player 2 is the supreme champion!!!!'
 end
 
 
