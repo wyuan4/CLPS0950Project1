@@ -2,8 +2,10 @@
 P1_Win = 0;
 P2_Win = 0;
 
-
+%this for loop is to keep track of statistics so we can check probability
+%that player 1 and player 2 win (see if whoever starts wins more often)
 for X = 1:5000;
+    
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
 
@@ -46,6 +48,7 @@ while playable%loops until one player does not have playable cards
     
 end
 
+%display player 1 as winner if player 1 has an empty hand. Same for player2
 if isempty(p1_hand)
     P1_Win = P1_Win + 1;
     disp 'Player 1 is the supreme champion!!!!';
@@ -54,10 +57,12 @@ else
     disp 'Player 2 is the supreme champion!!!!';
 end
 
-disp('Player One Wins ='); disp(P1_Win);
-disp('Player Two Wins ='); disp(P2_Win);
+%I don't think we need these but someone lmk, otherwise we can delete -Kennedy:
+% disp('Player One Wins ='); disp(P1_Win);
+% disp('Player Two Wins ='); disp(P2_Win);
 end
 
+%This is to create a bar graph comparing the total wins of P1 and P2
 y = [P1_Win P2_Win];
 bar(y);
 xlabel('Player N');
