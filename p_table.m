@@ -15,7 +15,7 @@ function p_table(dim,color,h)
 %
 %   Do not attempt to change the dimensions of the card table
 %   while there are cards on the table, as this will alter
-%   the appearance of the cards in an unappealing way. If you need
+%   the appearance of the cards in an unappealing way (go bananas). If you need
 %   to change the table dimensions, first clear all cards from it
 %   by using DELETE and then update the table in the current axes
 %   using this function.
