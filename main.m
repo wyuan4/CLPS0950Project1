@@ -43,12 +43,12 @@ if (random_int == 1)
     while playable%loops until one player does not have playable cards
 
         %Player 1 takes their turn, and draws card
-        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
-        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
+        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
+        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
 
         %Player 2 takes their turn,, and draws card
-        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
-        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
+        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
+        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
 
         if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
             middle_card1 = randi(13);
@@ -64,12 +64,12 @@ else
     while playable%loops until one player does not have playable cards
 
         %Player 2 takes their turn,, and draws card
-        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
-        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
+        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
+        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
 
          %Player 1 takes their turn, and draws card
-        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
-        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
+        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
+        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
 
         if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
             middle_card1 = randi(13);

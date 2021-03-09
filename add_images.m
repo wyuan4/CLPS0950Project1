@@ -7,7 +7,7 @@
 %increment showing each card as played / each card being removed from hand
 %and added to hand
 
-%a pop up appears saying "Player 1 Won!" or "Player 2 Won!"
+%at the end: a pop up appears saying "Player 1 Won!" or "Player 2 Won!"
 
 %a function that takes in an input of what the card is that we want to
 %display string or int "1" and also where (each individual card in players' hand has a
