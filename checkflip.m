@@ -13,12 +13,12 @@ if len == 0 %Returns empty hand and new middle cards.
     new_mc1=mc1;
     new_mc2=mc2;
 else
-    for i=len:-1:1%Goes through hand and replaces middle card if possible while removing card from hand. Also checks if middle card is a joker. Also checks if cards can crossover (ace to 1, and vice versa)
+    for i=randi(len):-1:1%Goes through hand and replaces middle card if possible while removing card from hand. Also checks if middle card is a joker. Also checks if cards can crossover (ace to 1, and vice versa)
         if hand(i) == mc1+1 || hand(i) == mc1-1 || mc1 == 1000 || (hand(i) == 1 && mc1 == 13) || (hand(i) == 13 && mc1 == 1) 
-            mc1 = hand(i)
+            mc1 = hand(i);
             hand(i) = [];
         elseif  hand(i) == mc2+1|| hand(i) == mc2-1 || mc2 == 1000 || (hand(i) == 1 && mc2 == 13) || (hand(i) == 13 && mc2 == 1)
-            mc2 = hand(i)
+            mc2 = hand(i);
             hand(i) = [];
         end
     end
