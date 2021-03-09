@@ -19,6 +19,8 @@ else
             hand(i) = [];
         elseif  hand(i) == mc2+1|| hand(i) == mc2-1 || mc2 == 1000 || (hand(i) == 1 && mc2 == 13) || (hand(i) == 13 && mc2 == 1)
             mc2 = hand(i);
+            % call function add_image(hand(i), loc_of_mc2); to display
+            % image of new mc2 card ? -Kennedy
             hand(i) = [];
         end
     end

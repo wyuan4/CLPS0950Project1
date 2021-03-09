@@ -23,6 +23,8 @@ imagesc(img4)
 axis off; axis image
 
 
+
+
 % speedcardplot(0,0,10,5,'diamonds')
 % axis off; axis image
 % 
