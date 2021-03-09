@@ -50,10 +50,11 @@ if (random_int == 1)
         [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
         [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
         
-        arrstr = input('Type Yes for visual of finished turn [Answer]: ','s');        
+        arrstr = input('Press Enter for Next Turn [Answer]: ','s');        
         
         if strcmp(arrstr,'Yes')
-        visual_test(p1_hand, p2_hand, middle_card1,middle_card2)%creates visual render of the final result of the turn%  
+        visual_test(p1_hand, p2_hand, middle_card1,middle_card2);
+        
         end
 
         if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
@@ -77,10 +78,11 @@ else
         [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
         [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
         
-        arrstr = input('Type Yes for visual of finished turn [Answer]: ','s');       
+        arrstr = input('Press Enter for Next Turn [Answer]: ','s');        
         
         if strcmp(arrstr,'Yes')
-        visual_test(p1_hand, p2_hand, middle_card1,middle_card2) %creates visual render of the final result of the turn%
+        visual_test(p1_hand, p2_hand, middle_card1,middle_card2);
+        
         end
 
         if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
