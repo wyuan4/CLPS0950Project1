@@ -1,6 +1,6 @@
 function [table_image] = visual_test(p_hand1, p_hand2, mc1, mc2)
 
-img1 = webread('https://i.imgur.com/kD0ASl5.png');%assin an image of a card to
+img1 = webread('https://i.imgur.com/kD0ASl5.png');%assigns a link of an image of a card to each variable
 img2 = webread('https://i.imgur.com/7sI5Ryi.png');
 img3 = webread('https://i.imgur.com/n9d5m1c.png');
 img4 = webread('https://i.imgur.com/31AzfTA.png');
@@ -15,10 +15,14 @@ img12 = webread('https://i.imgur.com/O5Xo5Mb.png');
 img13 = webread('https://i.imgur.com/4lhzjZp.png');
 img14 = webread('https://i.imgur.com/XF7FgfM.png');
 
-
+%assigns appropriate cards for player one's hand%
     for i = 1:5
         table_image= subplot(3,5,i);
-        if p_hand1(i) == 1
+        some_func(i)
+            if i==1 return img1
+        some_img = some_func(p_hand1(i))
+        imagesc(some_img)
+        if p_hand1(i) == 1%if card is equal to a value, render appropriate image%
             imagesc(img1)
             axis off
             axis image
@@ -76,7 +80,7 @@ img14 = webread('https://i.imgur.com/XF7FgfM.png');
             axis image
         end
     end
-    
+    %assigns appropriate cards for player two's hand%
     for i = 1:5
         table_image = subplot(3,5,i+10);
         if p_hand2(i) == 1
@@ -137,7 +141,7 @@ img14 = webread('https://i.imgur.com/XF7FgfM.png');
             axis image
         end
     end
-    
+    %assigns appropriate cards for middle card1%
     table_image = subplot(3,5,7)
     if mc1 == 1
         imagesc(img1)
@@ -197,6 +201,7 @@ img14 = webread('https://i.imgur.com/XF7FgfM.png');
         axis image
     end
     
+    %assigns appropriate cards for middle card1%
     table_image = subplot(3,5,9)
     if mc2 == 1
         imagesc(img1)
