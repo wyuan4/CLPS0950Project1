@@ -3,9 +3,10 @@
 str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
 
 main_deck = repmat(1:13,1,4);
+Jokerable = false; %if deck has jokers, will turn true once addJokers function is called
 
 if strcmp(str,'Yes') 
-    main_deck = addJokers(main_deck);
+    [main_deck, Jokerable] = addJokers(main_deck);
 end
 
 %next, implement the checkflip function to add a step (if statement) that checks if
