@@ -1,7 +1,9 @@
 %initiate the main vector for deck, ask if player wants jokers in
 %deck or not and then add jokers if user said 'Yes'
 str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
-
+P1_Win = 0;
+P2_Win = 0;
+for X = 1:500
 main_deck = repmat(1:13,1,4);
 Jokerable = false; %if deck has jokers, will turn true once addJokers function is called
 
@@ -59,7 +61,20 @@ end
 
 %display player 1 as winner if player 1 has an empty hand. Same for player2
 if isempty(p1_hand)
+    P1_Win = P1_Win + 1;
     disp 'Player 1 is the supreme champion!!!!';
 else
+    P2_Win = P2_Win + 1;
     disp 'Player 2 is the supreme champion!!!!';
 end
+
+%I don't think we need these but someone lmk, otherwise we can delete -Kennedy:
+% disp('Player One Wins ='); disp(P1_Win);
+% disp('Player Two Wins ='); disp(P2_Win);
+end
+
+%This is to create a bar graph comparing the total wins of P1 and P2
+y = [P1_Win P2_Win];
+bar(y);
+xlabel('Player N');
+ylabel('Total Wins');

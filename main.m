@@ -4,7 +4,7 @@ P2_Win = 0;
 
 %this for loop is to keep track of statistics so we can check probability
 %that player 1 and player 2 win (see if whoever starts wins more often)
-for X = 1:5000;
+for X = 1:5000
     
 %initiate the main vector for deck
 main_deck = repmat(1:13,1,4);
