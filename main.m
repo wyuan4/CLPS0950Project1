@@ -16,11 +16,13 @@ end
 %shuffle main deck
 main_deck = main_deck(randperm(length(main_deck)));
 
+%pull two middle cards from the main deck
+[middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 %split the deck into two from the middle (for the two players); 
 %potentially think about randomizing the hands later on in the process
-p1_deck = main_deck(1:length(main_deck)/2);
-p2_deck = main_deck((length(main_deck)/2)+1:end);
+p1_deck = new_deck(1:length(new_deck)/2);
+p2_deck = new_deck((length(new_deck)/2)+1:end);
 
 %shuffles each players' decks
 %p1_deck = p1_deck(randperm(length(p1_deck)));
@@ -29,10 +31,6 @@ p2_deck = main_deck((length(main_deck)/2)+1:end);
 %Each player draws five cards from their decks
 [p1_hand, p1_deck] = draw_hand(p1_deck);
 [p2_hand, p2_deck] = draw_hand(p2_deck);
-
-%pull two middle cards from the main deck AFTER players draw from hands as
-%to not have overlapping same cards in middle cards and players hands
-[middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 random_int = randi(2); %this determines who goes first initially
 
