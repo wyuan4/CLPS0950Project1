@@ -4,17 +4,12 @@
 
 P1_Win = 0;
 P2_Win = 0;
-N = 50; %Number of games to be run (set by user)
+N = 50; %Number of games to be run (can be set by user)
 
 for X = 1:N %Runs the game N times (set by the user) to simulate outcomes. This does not visualize the game at all.
 main_deck = repmat(1:13,1,4);
 [main_deck] = addJokers(main_deck);
 random_int = randi(2);
-
-%Next, implement the checkflip function to add a step (if statement) that checks if
-%players have jokers, putting down the joker, and then randomly assigning
-%one of the players to put down the next random card (any card). continuing
-%the game after that.
 
 %shuffle main deck
 main_deck = main_deck(randperm(length(main_deck)));
@@ -26,10 +21,6 @@ main_deck = main_deck(randperm(length(main_deck)));
 %potentially think about randomizing the hands later on in the process
 p1_deck = new_deck(1:length(new_deck)/2);
 p2_deck = new_deck((length(new_deck)/2)+1:end);
-
-%shuffles each players' decks
-%p1_deck = p1_deck(randperm(length(p1_deck)));
-%p2_deck = p2_deck(randperm(length(p2_deck)));
 
 %Each player draws five cards from their decks
 [p1_hand, p1_deck] = draw_hand(p1_deck);
@@ -102,6 +93,7 @@ elseif P2_Win > P1_Win
 else
     disp('We tied. Time for a deathmatch.');
 end
+
 %This is to create a bar graph comparing the total wins of P1 and P2
 y = [P1_Win P2_Win];
 bar(y);

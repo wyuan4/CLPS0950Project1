@@ -15,7 +15,7 @@ img12 = webread('https://i.imgur.com/O5Xo5Mb.png');
 img13 = webread('https://i.imgur.com/4lhzjZp.png');
 img14 = webread('https://i.imgur.com/XF7FgfM.png');
 
-if num == 1%if card is equal to a value, render appropriate image%
+if num == 1%if card is equal to a value, render appropriate image
     img = img1;
 elseif num == 2
     img = img2;
@@ -42,7 +42,7 @@ elseif num == 12
 elseif num == 13
     img = img13;
 elseif num == 1000
-    img = img14;%joker%
+    img = img14;%joker
 end
 
 end
