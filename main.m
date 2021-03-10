@@ -46,7 +46,7 @@ if (random_int == 1)
         [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
         [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
-        if (~drawable1) && (~drawable2) && (length(p1_deck)>=1) && (length(p2_deck)>=1)%Replaces Middle cards with random cards.
+        if (~drawable1) && (~drawable2) && (length(p1_deck)>=1) && (length(p2_deck)>=1)%Replaces Middle cards with next card from deck.
             middle_card1 = p1_deck(1);
             middle_card2 = p2_deck(1);
         elseif (~drawable1) && (~drawable2) && (isempty(p1_deck)) && (isempty(p2_deck))%If both players decks are empty, take random card from players hand
@@ -83,7 +83,7 @@ else
         [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
         [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
         
-        if (~drawable1) && (~drawable2) && (length(p1_deck)>=1) && (length(p2_deck)>=1)%Replaces Middle cards with random cards from decks.
+        if (~drawable1) && (~drawable2) && (length(p1_deck)>=1) && (length(p2_deck)>=1)%Replaces Middle cards with next card from deck.
             middle_card1 = p1_deck(1);
             p1_deck(1) = [];
             middle_card2 = p2_deck(1);
