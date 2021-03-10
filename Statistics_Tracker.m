@@ -20,7 +20,6 @@ random_int = randi(2);
 main_deck = main_deck(randperm(length(main_deck)));
 
 %pull two middle cards from the main deck
-
 [middle_card1, middle_card2, new_deck] = middle_card(main_deck);
 
 %split the deck into two from the middle (for the two players); 
