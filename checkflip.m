@@ -24,7 +24,7 @@ else
     end
     if len > length(hand)%Calls function recursively to check if any prior cards can be played
         [new_hand, new_mc1,new_mc2] = checkflip(hand, mc1, mc2);
-    elseif sum(hand) > 1000 %If hand sum is greater than 1000, there is a joker in the hand
+    elseif sum(hand) >= 1000 %If hand sum is greater than or equal 1000, there is a joker in the hand
         for i=len:-1:1
             if (hand(i) == 1000) %check if hand has joker
                 if (mc1 == 1000) % if middle card 1 is already a joker, don't want to place jokers on top of each other
