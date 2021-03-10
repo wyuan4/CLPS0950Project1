@@ -1,3 +1,7 @@
+%This Statistic_Tracker script runs the game of Speed without visual
+%representation for N number of times (that is currently set to 50000)
+%and reports the number of times that each player wins in a bar graph
+
 P1_Win = 0;
 P2_Win = 0;
 N = 50000; %Number of games to be run (set by user)
@@ -7,7 +11,7 @@ main_deck = repmat(1:13,1,4);
 [main_deck] = addJokers(main_deck);
 random_int = randi(2);
 
-%next, implement the checkflip function to add a step (if statement) that checks if
+%Next, implement the checkflip function to add a step (if statement) that checks if
 %players have jokers, putting down the joker, and then randomly assigning
 %one of the players to put down the next random card (any card). continuing
 %the game after that.
