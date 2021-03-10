@@ -1,18 +1,11 @@
-%initiate the main vector for deck, ask if player wants jokers in
-%deck or not and then add jokers if user said 'Yes'
-str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
 P1_Win = 0;
 P2_Win = 0;
-N = 5000; %Number of games to be run (set by user)
+N = 50000; %Number of games to be run (set by user)
 
 for X = 1:N %Runs the game N times (set by the user) to simulate outcomes. This does not visualize the game at all.
 main_deck = repmat(1:13,1,4);
-Jokerable = false; %if deck has jokers, will turn true once addJokers function is called
+[main_deck] = addJokers(main_deck);
 random_int = randi(2);
-
-if strcmp(str,'Yes') 
-    [main_deck, Jokerable] = addJokers(main_deck);
-end
 
 %next, implement the checkflip function to add a step (if statement) that checks if
 %players have jokers, putting down the joker, and then randomly assigning

@@ -1,3 +1,14 @@
+%show initial players' hands
+
+%show initial middle cards
+
+%increment showing each new card that is played every turn
+
+%a function that takes in an input of what the cards are in each players hand as well as what the middle cards are
+%and displays the images associated with the cards in each player's hand as
+%well as the cards in the middle
+
+%The output is the image associated with the cards in hands and middle 
 function [table_image] = visual_test(p_hand1, p_hand2, mc1, mc2)
 
 %assigns appropriate cards for player one's hand%
