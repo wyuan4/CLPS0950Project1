@@ -3,7 +3,7 @@ function [new_hand, new_deck, drawable] = fillhand(hand,deck)
 %   Detailed explanation goes here
 num_needed = 5-length(hand);%#of cards that need to be drawn
 drawable = true;
-if length(hand) == 5 | isempty(deck)%Hand is full, so don't draw; deck is empty, so don't draw
+if length(hand) == 5 || isempty(deck)%Hand is full, so don't draw; deck is empty, so don't draw
     drawable = false;
     new_hand = hand;
     new_deck = deck;
