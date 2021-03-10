@@ -17,10 +17,12 @@ Run the main file. A message should pop up in the command script asking if you w
 
 File Descriptions:
 main.m
-This is the main file that contains our simulation. Run this file to see the simulation of 1 game.
-This function first initializes variables P1_Win and P2_Win, which will later be used to count the number of wins
+This is the main file that contains our visualized simulation of the game. Run this file to see how one theoretical game would play out.
+The visualized elements display the end of the previous turn the code runs on so that it can display the starting point of the next turn.
+
 Statistics_Tracker.m
-This is another script that simulates the game 50,000 times through a for loop (but the number of iterations can be changed easily by the user). 
+This is another script that simulates the game an arbitrary number of times through a loop. The default is 50,000 times but the number of iterations can be changed easily by the user.
+The point of this script is not to run simulations of the game as described by main.m (which is intended to visualize the game) but rather demonstrate the fairness of the game. 
 
 
 visual_test.m

@@ -4,7 +4,7 @@
 
 P1_Win = 0;
 P2_Win = 0;
-N = 50000; %Number of games to be run (set by user)
+N = 50; %Number of games to be run (set by user)
 
 for X = 1:N %Runs the game N times (set by the user) to simulate outcomes. This does not visualize the game at all.
 main_deck = repmat(1:13,1,4);
@@ -48,7 +48,13 @@ if (random_int == 1)
         [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
         [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
-        if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
+       %If the  middle card is unplayable, then two number cards are generated at
+       %random to fill in. Since each card has equal probability of being
+       %picked, this is analogous to a perfectly shuffled deck and
+       %shouldn't impact fairness, even if a fifth card of a certain face value is played.
+       %The goal of stats tracker is ultimately to
+       %simulate speed as a whole and not necessarily just main.m.
+        if (~drawable1) && (~drawable2)
             middle_card1 = randi(13);
             middle_card2 = randi(13);
         end
@@ -59,7 +65,7 @@ if (random_int == 1)
 
     end
 else
-    while playable%loops until one player does not have playable cards
+    while playable %loops until one player does not have playable cards
 
         %Player 2 takes their turn,, and draws card
         [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
@@ -68,14 +74,14 @@ else
          %Player 1 takes their turn, and draws card
         [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
         [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
-
-        if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
-            middle_card1 = randi(13);
-            middle_card2 = randi(13);
+        
+         if isempty(p2_hand) || isempty(p1_hand) %if a player's hand is empty, then end loop
+            playable = false;
         end
 
-        if isempty(p2_hand) || isempty(p1_hand) %if a player's hand is empty, then end loop
-            playable = false;
+         if (~drawable1) && (~drawable2)%Replaces Middle cards with random cards. Come back to this maybe??
+            middle_card1 = randi(13);
+            middle_card2 = randi(13);
         end
     end
 end
