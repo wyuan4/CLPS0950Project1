@@ -66,7 +66,7 @@ if (random_int == 1)
         visual_test(p1_hand, p2_hand, middle_card1,middle_card2)%creates visual render of the final result of the turn%  
         end
         
-        arrstr2 = input('Advance to next turn?', 's'); %Asks if user wants to advance to the next turn
+        arrstr2 = input('Advance to next turn? Yes/No [Answer]: ', 's'); %Asks if user wants to advance to the next turn
         
         if strcmp(arrstr2, 'Yes') %If yes, continue to next turn.
             
@@ -107,7 +107,7 @@ else
         visual_test(p1_hand, p2_hand, middle_card1,middle_card2) %creates visual render of the final result of the turn%
         end
         
-        arrstr2 = input('Advance to next turn?', 's'); %Asks player if want to advance to next turn
+        arrstr2 = input('Advance to next turn? Yes/No [Answer]: ', 's'); %Asks player if want to advance to next turn
         
         if strcmp(arrstr2, 'Yes') %If yes, continue to next turn.
             
