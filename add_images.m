@@ -4,14 +4,12 @@
 
 %show initial players' decks
 
-%increment showing each card as played / each card being removed from hand
-%and added to hand
+%increment showing each new card that is played every turn
 
-%at the end: a pop up appears saying "Player 1 Won!" or "Player 2 Won!"
-
-%a function that takes in an input of what the card is that we want to
+%a function that takes in an input of what the cards are in each players hand as well as what the middle cards are
 %display string or int "1" and also where (each individual card in players' hand has a
 %permanent location at (x,y), same with the decks, and the middle cards)...
 
 %the function itself will have if statements if input_card == 1 (or "1" if
-%string), then display card at (x,y)
+%string), then display card at subplot. The output is the image associated
+%with the card in hand or in middle card to display to overall table.
