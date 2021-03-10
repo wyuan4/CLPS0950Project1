@@ -1,7 +1,4 @@
 %initiate the main vector for deck
-P1_Win = 0;
-P2_Win = 0;
-
 
 main_deck = repmat(1:13,1,4); %this is the main deck, composed of four vectors of integers from 1 to 13
 [main_deck] = addJokers(main_deck);
