@@ -9,19 +9,35 @@
 function [table_image] = visual_test(p_hand1, p_hand2, mc1, mc2)
 
 %assigns appropriate card images for player one's hand
-    for i = 1:5
+    for i = 1:length(p_hand1)
         table_image = subplot(3,5,i);
         imagesc(img_retrieve(p_hand1(i)))
         axis off
         axis image
     end
+    
+     for j = 1:(5-length(p_hand1))
+         table_image = subplot(3,5,6-j);
+         imagesc([]);
+         axis off
+         axis image
+     end
+       
     %assigns appropriate cards for player two's hand
-    for i = 1:5
+    for i = 1:length(p_hand2)
         table_image = subplot(3,5,i+10);
         imagesc(img_retrieve(p_hand2(i)))
         axis off
         axis image
     end
+    
+    for j = 1:(5-length(p_hand2))
+        table_image = subplot(3,5,16-j);
+        imagesc([]);
+        axis off
+        axis image
+    end
+    
     %assigns appropriate cards for middle card1
     table_image = subplot(3,5,7)
     imagesc(img_retrieve(mc1))
