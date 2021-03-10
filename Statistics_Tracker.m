@@ -90,7 +90,8 @@ if P1_Win > P2_Win
     disp('Player One is the supreme champion!!!');
 elseif P2_Win > P1_Win
     disp('Player Two is the supreme champion!!!');
-else disp('We tied. Time for a deathmatch.');
+else
+    disp('We tied. Time for a deathmatch.');
 end
 %This is to create a bar graph comparing the total wins of P1 and P2
 y = [P1_Win P2_Win];
