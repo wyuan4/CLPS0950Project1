@@ -90,11 +90,9 @@ else
     P2_Win = P2_Win + 1;
 end
 
-%I don't think we need these but someone lmk, otherwise we can delete -Kennedy:
-% disp('Player One Wins ='); disp(P1_Win);
-% disp('Player Two Wins ='); disp(P2_Win);
 end
 
+%This simply displays a message which shows who wins the speed-off.
 if P1_Win > P2_Win
     disp('Player One is the supreme champion!!!');
 elseif P2_Win > P1_Win
