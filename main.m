@@ -1,4 +1,5 @@
 %Initiate the main vector for deck, ask if player wants to play with Jokers
+
 str = input('Would you like to play with Jokers? Yes/No [Answer]: ','s');
 main_deck = repmat(1:13,1,4); %this is the main deck, composed of four vectors of integers from 1 to 13
 [main_deck] = addJokers(main_deck);
