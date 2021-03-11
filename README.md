@@ -121,7 +121,8 @@ This function adds two joker cards to the full deck of cards to be played
 in the game. 
 
 
-[Demonstration Video](https://user-images.githubusercontent.com/79769852/110717612-62c59600-81d7-11eb-9750-0473b6aa4a23.mp4)
+[Demonstration Video](https://user-images.githubusercontent.com/79769852/110718924-ee402680-81d9-11eb-9c06-b2b9709f42a5.mp4)
+
 
 
 
