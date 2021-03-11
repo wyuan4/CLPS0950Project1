@@ -25,10 +25,10 @@ p2_deck = new_deck((length(new_deck)/2)+1:end);
 
 %Each player draws five cards from their decks through the draw_hand
 %function
-[p1_hand, p1_deck] = draw_hand(p1_deck)
-[p2_hand, p2_deck] = draw_hand(p2_deck)
+[p1_hand, p1_deck] = draw_hand(p1_deck);
+[p2_hand, p2_deck] = draw_hand(p2_deck);
 
-random_int = randi(2) %this determines which player goes first initially
+random_int = randi(2); %this determines which player goes first initially
 
 playable = true;
 while playable%loops until one player does not have anymore playable cards
@@ -40,21 +40,21 @@ while playable%loops until one player does not have anymore playable cards
     %were placed down with the fillhand function
     if (random_int == 1)
 
-        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
-        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
+        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
+        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
 
-        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
-        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
+        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
+        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
     else
         %if player 2 is chosen to go first, player 2 takes their turn and
         %draws cards if they put down cards, and player 1 does the same
         %after
-        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2)
-        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck)
+        [p2_hand,middle_card1,middle_card2] = checkflip(p2_hand,middle_card1,middle_card2);
+        [p2_hand, p2_deck, drawable2] = fillhand(p2_hand,p2_deck);
 
-        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2)
-        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck)
+        [p1_hand,middle_card1,middle_card2] = checkflip(p1_hand,middle_card1,middle_card2);
+        [p1_hand, p1_deck, drawable1] = fillhand(p1_hand,p1_deck);
     end
 
     if isempty(p1_hand) || isempty(p2_hand) %if a player's hand is empty, then end loop
@@ -65,16 +65,16 @@ while playable%loops until one player does not have anymore playable cards
     %Replaces Middle cards with next card from players' decks if both
     %players' cannot put down any cards from their hands
     if (~drawable1) && (~drawable2) && (length(p1_deck)>=1) && (length(p2_deck)>=1)
-        middle_card1 = p1_deck(1)
+        middle_card1 = p1_deck(1);
         p1_deck(1) = [];
-        middle_card2 = p2_deck(1)
+        middle_card2 = p2_deck(1);
         p2_deck(1) = [];
 
     %If either players decks are empty, take first card from players' hands
     elseif (~drawable1) && (~drawable2) && ((isempty(p1_deck)) || (isempty(p2_deck)))
-        middle_card1 = p1_hand(1)
+        middle_card1 = p1_hand(1);
         p1_hand(1) = [];
-        middle_card2 = p2_hand(1)
+        middle_card2 = p2_hand(1);
         p2_hand(1) = [];
     end
 

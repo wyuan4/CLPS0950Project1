@@ -4,7 +4,7 @@
 
 P1_Win = 0;
 P2_Win = 0;
-N = 50; %Number of games to be run (can be set by user)
+N = 50000; %Number of games to be run (can be set by user)
 
 for X = 1:N %Runs the game N times (set by the user) to simulate outcomes. This does not visualize the game at all.
 main_deck = repmat(1:13,1,4);
