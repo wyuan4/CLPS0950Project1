@@ -61,11 +61,10 @@ addJokers.m
 This function adds two joker cards to the full deck of cards to be played in the game. 
 
 
-[Demonstration Video](https://i.imgur.com/5di8VMY.mp4)
+[Demonstration Video](https://user-images.githubusercontent.com/79769852/110716235-bda9be00-81d4-11eb-9a9e-fb0c9479c5af.mp4)
 
 
 
-https://user-images.githubusercontent.com/79769852/110716106-7cb1a980-81d4-11eb-9fc6-552ecdfe33e8.mp4
 
 
 
