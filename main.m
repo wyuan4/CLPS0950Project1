@@ -88,9 +88,9 @@ while playable%loops until one player does not have anymore playable cards
 
     %prompts the user to type in 'Yes' if they would like to continue the
     %game with the next turns 
-    arrstr2 = input('Advance to next turn? Yes/No [Answer]: ', 's'); 
+    arrstr2 = input('Type "Go" when you are ready to advance to the next turn. [Answer]: ', 's'); 
 
-    if strcmp(arrstr2, 'Yes') %If yes, continue to next turn.
+    if strcmp(arrstr2, 'Go') %If yes, continue to next turn.
 
     end
        
