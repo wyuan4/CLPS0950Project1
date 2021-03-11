@@ -16,6 +16,7 @@ Instructions:
 Run the main file. A message should pop up in the command script asking if you want to run the simulation with or without jokers. Type in “Yes” to add jokers and “No” to play without jokers. One simulation will either have jokers or not. At the end of each turn, the command prompt will ask if you want to see a visual display of the game. Each round randomizes which player goes first to ensure fairness. We also randomized the length of the turn in the checkflip function to increase fairness (Note: This simulates human error in which it is not guaranteed that every single thing that can be put down will be put down in that turn i.g. if a player has 5 cards and only look at 3, those last 2 are never seen and may not be put down that turn because we don’t technically see it. If you type “Yes”, a visual representation of the game will appear, consisting of each player’s hand and the current middle cards. At the end of the run, the command prompt will display which player won.  You can also run the statistics tracker file to play Speed without visual representations for a total of N times. The number of wins for both Player 1 and Player 2 is recorded and displayed at the end of the N number of games. A barplot should also show the win record for each player.
 
 File Descriptions:
+
 main.m
 This is the main file that contains our visualized simulation of the game. Run this file to see how one theoretical game would play out.
 The visualized elements display the end of the previous turn the code runs on so that it can display the starting point of the next turn.
@@ -61,7 +62,9 @@ addJokers.m
 This function adds two joker cards to the full deck of cards to be played in the game. 
 
 
-[Demonstration Video](https://user-images.githubusercontent.com/79769852/110716235-bda9be00-81d4-11eb-9a9e-fb0c9479c5af.mp4)
+[Demonstration Video](https://user-images.githubusercontent.com/79769852/110717612-62c59600-81d7-11eb-9750-0473b6aa4a23.mp4)
+
+
 
 
 
