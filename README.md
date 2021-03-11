@@ -63,8 +63,9 @@ This function adds two joker cards to the full deck of cards to be played in the
 
 [Demonstration Video](https://i.imgur.com/5di8VMY.mp4)
 
-<img src="https://i.imgur.com/5di8VMY.mp4"/>
 
+
+https://user-images.githubusercontent.com/79769852/110716106-7cb1a980-81d4-11eb-9fc6-552ecdfe33e8.mp4
 
 
 
